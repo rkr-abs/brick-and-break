@@ -1,0 +1,18 @@
+# Ignores
+## General
+.*
+*.tgz
+
+# Excludes
+## General
+!.git*
+!.npmignore
+images
+
+## Dev
+!.editorconfig
+!.eslint*
+dist
+!.vscode
+.vscode/*
+!.vscode/launch.json
