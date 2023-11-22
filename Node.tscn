@@ -180,4 +180,3 @@ shape = SubResource( 3 )
 [connection signal="viewport_exited" from="ball/VisibilityNotifier2D" to="ball" method="_on_VisibilityNotifier2D_viewport_exited"]
 [connection signal="start_game" from="ball/CanvasLayer" to="." method="new_game"]
 [connection signal="pressed" from="ball/CanvasLayer/StartButton" to="ball/CanvasLayer" method="_on_Button_pressed"]
-[connection signal="update_scores" from="brick" to="." method="_on_brick_update_scores"]

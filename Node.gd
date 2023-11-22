@@ -15,6 +15,7 @@ func create_brick():
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	create_brick()
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,6 +29,7 @@ func new_game():
 	$ball/CanvasLayer.update_score(GlobalVariables.score)
 	$Bat.show()
 	$Bat.position = Vector2.ZERO
+	$ball.show()
 	$ball._new_game()  # Replace with function body.
 
 
@@ -37,6 +39,3 @@ func _on_ball_game_over():
 	$ball/CanvasLayer.show_game_over() # Replace with function body.
 
 
-func _on_brick_update_scores():
-	GlobalVariables.score += 1
-	$ball/CanvasLayer.update_score(GlobalVariables.score)  # Replace with function body.

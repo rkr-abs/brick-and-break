@@ -25,8 +25,8 @@ func show_game_over():
 	show_message("Game Over")
 	$StartButton.show()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	$ScoreLabel.text = str(GlobalVariables.score)
 
 
 func _on_Button_pressed():

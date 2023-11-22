@@ -1,5 +1,5 @@
 extends Area2D
-signal update_scores
+
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -18,7 +18,7 @@ func _ready():
 
 
 func _on_brick_body_entered(body):
+	GlobalVariables.score += 1
 	queue_free()
-	emit_signal("update_scores")
 	
 	 # Replace with function body.
