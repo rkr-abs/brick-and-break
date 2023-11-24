@@ -32,6 +32,8 @@ func _process(delta):
 func _on_Button_pressed():
 	$StartButton.hide()
 	$Message.hide()
+	$AudioStreamPlayer.play()
 	emit_signal("start_game")  
+	
 
 

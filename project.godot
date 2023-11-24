@@ -11,6 +11,7 @@ config_version=4
 [application]
 
 config/name="ping pong"
+run/main_scene="res://Node.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -19,8 +20,8 @@ GlobalVariables="*res://variables.gd"
 
 [display]
 
-window/size/width=1920
-window/size/height=1020
+window/size/width=400
+window/size/height=200
 
 [gui]
 
