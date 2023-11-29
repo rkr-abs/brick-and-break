@@ -11,10 +11,13 @@ func create_brick():
 		brick.position = Vector2(300 * br,-100) 
 		add_child(brick)
 	
+	
+	
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	create_brick()
+	$BGMusic.play()
 	
 
 
@@ -31,6 +34,7 @@ func new_game():
 	$Bat.position = Vector2.ZERO
 	$ball.show()
 	$ball._new_game()  # Replace with function body.
+	
 
 
 func _on_ball_game_over():

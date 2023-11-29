@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bathit.mp3-4893a1cb31a07c3360061cd2f70fe21d.mp3str"
+
+[deps]
+
+source_file="res://Audio/bathit.mp3"
+dest_files=[ "res://.import/bathit.mp3-4893a1cb31a07c3360061cd2f70fe21d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

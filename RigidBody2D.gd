@@ -22,3 +22,22 @@ func _new_game():
 
 func _on_VisibilityNotifier2D_viewport_exited(viewport):
 	emit_signal("game_over") # Replace with function body.
+
+
+
+
+
+
+
+
+func _on_ball_body_entered(body):
+	
+	var bodies=get_colliding_bodies()	
+	if body.name=="Bat":
+		$BatHitAudio.play()
+	elif body.name.substr(0,4)=="wall":
+		print("working")
+		$WallHitAudio.play()
+	
+	
+	

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/brickDisappear.mp3-79ff8b9baf06c66e333c41c7a530d576.mp3str"
+
+[deps]
+
+source_file="res://Audio/brickDisappear.mp3"
+dest_files=[ "res://.import/brickDisappear.mp3-79ff8b9baf06c66e333c41c7a530d576.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
