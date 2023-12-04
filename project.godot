@@ -17,6 +17,7 @@ config/icon="res://icon.png"
 [autoload]
 
 GlobalVariables="*res://variables.gd"
+AudioController="*res://Audio/AudioController.tscn"
 
 [display]
 

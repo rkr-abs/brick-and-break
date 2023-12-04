@@ -20,6 +20,6 @@ func _ready():
 func _on_brick_body_entered(body):
 	GlobalVariables.score += 1
 	queue_free()
-	$"../BrickDisappearAudio".play()
+	AudioController.playSFX(body)
 	
 	 # Replace with function body.

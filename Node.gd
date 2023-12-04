@@ -17,7 +17,7 @@ func create_brick():
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	create_brick()
-	$BGMusic.play()
+	AudioController.playTheme()
 	
 
 
@@ -43,8 +43,13 @@ func _on_ball_game_over():
 	$ball/CanvasLayer.show_game_over() # Replace with function body.
 
 
-var music_bus=AudioServer.get_bus_index("Music")
 
 
-func _on_CheckButton_pressed():
-	AudioServer.set_bus_mute(music_bus, not AudioServer.is_bus_mute(music_bus))
+
+func _on_MusicButton_pressed():
+	AudioController.muteBus("Music")	
+
+
+func _on_SoundButton_pressed():
+	AudioController.muteBus("SFX")
+

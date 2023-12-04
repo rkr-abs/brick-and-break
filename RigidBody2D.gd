@@ -31,12 +31,8 @@ func _on_VisibilityNotifier2D_viewport_exited(viewport):
 
 
 func _on_ball_body_entered(body):
-	
-	var bodies=get_colliding_bodies()	
-	if body.name=="Bat":
-		$BatHitAudio.play()
-	elif body.name.substr(0,4)=="wall":
-		$WallHitAudio.play()
+	print(body)
+	AudioController.playSFX(body)
 	
 	
 	

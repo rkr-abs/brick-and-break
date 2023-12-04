@@ -32,7 +32,7 @@ func _process(delta):
 func _on_Button_pressed():
 	$StartButton.hide()
 	$Message.hide()
-	$Srart_Btn_Audio.play()
+	AudioController.playSFX("start")
 	emit_signal("start_game")  
 	
 
