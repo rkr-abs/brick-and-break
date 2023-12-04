@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://images/Baseball-bat.png" type="Texture" id=1]
 [ext_resource path="res://images/baseball.png" type="Texture" id=2]
@@ -10,7 +10,7 @@
 [ext_resource path="res://CanvasLayer.gd" type="Script" id=8]
 [ext_resource path="res://Xolonium-Regular.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://images/e4743a64eb6ce8c4fc5bf32f131b4623.jpg" type="Texture" id=10]
-[ext_resource path="res://Audio/bgMusic.mp3" type="AudioStream" id=11]
+[ext_resource path="res://Audio/birdfish-happy-loop-6199.mp3" type="AudioStream" id=11]
 [ext_resource path="res://Audio/bathit.mp3" type="AudioStream" id=12]
 [ext_resource path="res://Audio/wallhit.mp3" type="AudioStream" id=13]
 [ext_resource path="res://Audio/startBtn.mp3" type="AudioStream" id=14]
@@ -37,6 +37,8 @@ font_data = ExtResource( 9 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 28.5, 200.435 )
 
+[sub_resource type="DynamicFont" id=8]
+
 [node name="Main" type="Node"]
 script = ExtResource( 6 )
 brick_scene = ExtResource( 7 )
@@ -44,10 +46,10 @@ brick_scene = ExtResource( 7 )
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 56.0
-margin_top = 48.0
-margin_right = -38.0
-margin_bottom = -90.0
+margin_left = 52.0
+margin_top = 32.0
+margin_right = -42.0
+margin_bottom = -106.0
 texture = ExtResource( 10 )
 stretch_mode = 1
 
@@ -126,12 +128,12 @@ align = 1
 stream = ExtResource( 14 )
 bus = "SFX"
 
-[node name="BatHitAudio" type="AudioStreamPlayer" parent="ball"]
-stream = ExtResource( 12 )
-bus = "SFX"
-
 [node name="WallHitAudio" type="AudioStreamPlayer" parent="ball"]
 stream = ExtResource( 13 )
+bus = "SFX"
+
+[node name="BatHitAudio" type="AudioStreamPlayer" parent="ball"]
+stream = ExtResource( 12 )
 bus = "SFX"
 
 [node name="wall-left" type="StaticBody2D" parent="."]
@@ -205,9 +207,22 @@ bus = "Music"
 stream = ExtResource( 15 )
 bus = "SFX"
 
+[node name="SampleAudio" type="AudioStreamPlayer" parent="."]
+
+[node name="MusicCheckButton" type="CheckButton" parent="."]
+anchor_right = 0.02
+anchor_bottom = 0.037
+margin_left = 1503.0
+margin_top = 803.0
+margin_right = 1794.6
+margin_bottom = 860.04
+custom_fonts/font = SubResource( 8 )
+text = "Music"
+
 [connection signal="child_entered_tree" from="Bat/Sprite" to="ball" method="_on_Sprite_child_entered_tree"]
 [connection signal="body_entered" from="ball" to="ball" method="_on_ball_body_entered"]
 [connection signal="game_over" from="ball" to="." method="_on_ball_game_over"]
 [connection signal="viewport_exited" from="ball/VisibilityNotifier2D" to="ball" method="_on_VisibilityNotifier2D_viewport_exited"]
 [connection signal="start_game" from="ball/CanvasLayer" to="." method="new_game"]
 [connection signal="pressed" from="ball/CanvasLayer/StartButton" to="ball/CanvasLayer" method="_on_Button_pressed"]
+[connection signal="pressed" from="MusicCheckButton" to="." method="_on_CheckButton_pressed"]

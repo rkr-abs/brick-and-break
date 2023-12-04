@@ -43,3 +43,8 @@ func _on_ball_game_over():
 	$ball/CanvasLayer.show_game_over() # Replace with function body.
 
 
+var music_bus=AudioServer.get_bus_index("Music")
+
+
+func _on_CheckButton_pressed():
+	AudioServer.set_bus_mute(music_bus, not AudioServer.is_bus_mute(music_bus))

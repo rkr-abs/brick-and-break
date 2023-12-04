@@ -36,7 +36,6 @@ func _on_ball_body_entered(body):
 	if body.name=="Bat":
 		$BatHitAudio.play()
 	elif body.name.substr(0,4)=="wall":
-		print("working")
 		$WallHitAudio.play()
 	
 	
